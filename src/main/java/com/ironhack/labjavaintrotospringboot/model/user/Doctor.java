@@ -18,7 +18,7 @@ public class Doctor extends User {
     @Setter(AccessLevel.NONE)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int doctor_id;
+    private int doctorId;
 
     @Enumerated(EnumType.STRING)
     private Department department;
@@ -30,8 +30,8 @@ public class Doctor extends User {
     @JsonIgnore
     private Set<Patient> patients;
 
-    public Doctor(int doctor_id, Department department, DoctorStatus status) {
-        this.doctor_id = doctor_id;
+    public Doctor(int doctorId, Department department, DoctorStatus status) {
+        this.doctorId = doctorId;
         this.department = department;
         this.status = status;
     }
